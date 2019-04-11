@@ -1,0 +1,227 @@
+[
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"key": "de",
+		"type": "LANGUAGE",
+		"value": "German"
+	},
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"key": "en",
+		"type": "LANGUAGE",
+		"value": "English"
+	},
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"id": 11,
+		"type": "SMTP",
+		"key": "email",
+		"value": "seriea@serie-a.de"
+	},
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"id": 12,
+		"type": "SMTP",
+		"key": "name",
+		"value": "serie a"
+	},
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"id": 13,
+		"type": "SMTP",
+		"key": "host",
+		"value": "mail.serie-a.net"
+	},
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"id": 14,
+		"type": "SMTP",
+		"key": "port",
+		"value": "25"
+	},
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"id": 15,
+		"type": "SMTP",
+		"key": "user",
+		"value": ""
+	},
+	{
+		"_class": "de.seriea.nx3.core.model.shared.Configuration",
+		"id": 16,
+		"type": "SMTP",
+		"key": "pass",
+		"value": ""
+	}, 
+	{
+	    "_class" : "de.seriea.nx3.core.model.shared.Configuration",
+	    "id" : 17,
+	    "type" : "IMAP",
+	    "key" : "host",
+	    "value" : "imap.gmail.com"
+	},
+	{
+	    "_class" : "de.seriea.nx3.core.model.shared.Configuration",
+	    "id" : 18,
+	    "type" : "IMAP",
+	    "key" : "port",
+	    "value" : "993"
+	},
+	{
+	    "_class" : "de.seriea.nx3.core.model.shared.Configuration",
+	    "id" : 19,
+	    "type" : "IMAP",
+	    "key" : "user",
+	    "value" : "mail-test@serie-a.de"
+	},
+	{
+	    "_class" : "de.seriea.nx3.core.model.shared.Configuration",
+	    "id" : 20,
+	    "type" : "IMAP",
+	    "key" : "pass",
+	    "value" : "d3vd3vd3v"
+	},
+	{
+	    "_class" : "de.seriea.nx3.core.model.shared.Configuration",
+	    "id" : 17,
+	    "type" : "BPM",
+	    "key" : "knowledgeWorker",
+	    "value" : "mail-test@serie-a.de"
+	},
+	{
+	    "_class" : "de.seriea.nx3.core.model.shared.Configuration",
+	    "id" : 22,
+	    "type" : "BPM",
+	    "key" : "incidentEmailReceivers",
+	    "value" : "test@test.de,test2@test2.de"
+	},
+	
+	{	
+		"_class":"de.seriea.nx3.core.model.reporting.Nx3DataQuery",
+		"description":"test",
+		"id":"21",
+		"jpqlQuery":"",
+		"name":"sql",
+		"parameters":[],
+		"sqlQuery":"SELECT root.language, COUNT(root.language) from NX3_TRANSLATION root GROUP BY root.language",
+		"type":"SQL"
+	},
+	
+	
+	
+	{
+		"_class": "de.seriea.nx3.core.model.businesspartner.Operator",
+		"id": 30,
+		"actor": {
+			"id": 301,
+			"name": "serie-a lsag"
+		}
+	},
+	
+	{
+	  "_class": "de.seriea.nx3.core.model.businesspartner.Employee",
+	  "id" : 1003,
+	  "actor" : {
+	    "communication" : {
+	      "emailWork" : "daniel.peer@serie-a.de",
+	      "preferedLanguage":"en"
+	    },
+	    "termsAndConditionsAccepted" : true,
+	    "privateAgreementAccepted" : true,
+	    "firstName" : "admin",
+	    "lastName" : "admin",
+	    "name" : "admin"
+	  },
+	  "roles" : [ {
+	    "referenceId" : "30",
+	    "type" : "de.seriea.nx3.core.model.businesspartner.Operator",
+	    "label" : "serie-a lsag",
+	    "role":"Operator",
+	    "order" : 0
+	  } ],
+	  "admin" : true,
+	  "references" : [ {
+	    "referenceId" : "301",
+	    "type" : "de.seriea.nx3.core.model.businesspartner.Organization",
+	    "label" : "serie-a lsag",
+	    "role":"Operator",
+	    "order" : 0
+	  } ]
+	},
+	
+	{
+	  "_class": "de.seriea.nx3.core.model.businesspartner.Employee",
+	  "id" : 1004,
+	  "actor" : {
+	    "communication" : {
+	      "emailWork" : "markus.hens@serie-a.de",
+	      "preferedLanguage":"de"
+	    },
+	    "termsAndConditionsAccepted" : true,
+	    "privateAgreementAccepted" : true,
+	    "firstName" : "employee",
+	    "lastName" : "employee",
+	    "name" : "employee"
+	  },
+	  "roles" : [ {
+	    "referenceId" : "30",
+	    "type" : "de.seriea.nx3.core.model.businesspartner.Operator",
+	    "label" : "serie-a lsag",
+	    "role":"Operator",
+	    "order" : 0
+	  } ],
+	  "admin" : true,
+	  "references" : [ {
+	    "referenceId" : "301",
+	    "type" : "de.seriea.nx3.core.model.businesspartner.Organization",
+	    "label" : "serie-a lsag",
+	    "role":"Operator",
+	    "order" : 0
+	  } ]
+	},
+	
+	{
+		"_class": "de.seriea.nx3.core.model.shared.UserDetails",
+		"user": "admin",
+		"reference": {
+			"referenceId": "1003",
+			"type": "de.seriea.nx3.core.model.businesspartner.Employee",
+			"label": "admin"
+		}
+	},
+	
+	{
+		"_class": "de.seriea.nx3.core.model.shared.UserDetails",
+		"user": "employee",
+		"reference": {
+			"referenceId": "1004",
+			"type": "de.seriea.nx3.core.model.businesspartner.Employee",
+			"label": "employee"
+		}
+	},
+	{
+        "_class": "de.seriea.nx3.core.model.cms.Site",
+        "displayString": "index",
+        "html": {
+            "texts": [
+                {
+                    "language": "de",
+                    "text": "<h1>Willkommen</h1>"
+                }
+            ]
+        },
+        
+        "iconClass": null,
+        "key": null,
+        "labelKey": "nx3_label_index",
+        "landingPage": true,
+        "mainMenu": true,
+        "modelExtension": {},
+        "name": "index",
+        "parent": null,
+        "securityGroups": [
+            "ANONYMOUS_GROUP"
+        ],
+        "id": "6211480990695559168"
+    }
+]

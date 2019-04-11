@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Sample configuration -->
+<infinispan xmlns="urn:infinispan:config:9.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:infinispan:config:9.1 http://infinispan.org/schemas/infinispan-config-9.1.xsd">
+   <jgroups>
+     <stack-file name="external-file" path="cache/tcp-cache-cluster.xml"/>
+   </jgroups>
+   <cache-container default-cache="nx3Cache">
+      <!-- This is the transport configuration for an cluster. It refers to the jgroups config which is  outsources to an external-file-->
+      <transport stack="external-file" cluster="nx3CacheCluster"/>
+      
+       <!-- This is a template for concrete object caches -->
+      <replicated-cache-configuration name="replicated-object-cache-template">
+      	<expiration lifespan="1000000"/> <!-- ca 15 Min bevor der Cache expired -->
+      	<memory><object size="100"></object></memory> <!-- 10 MB Cache -->
+      </replicated-cache-configuration>
+      
+      <!-- This is a template for concrete binary caches -->
+      <replicated-cache-configuration name="replicated-binary-cache-template">
+      	<expiration lifespan="1000000" /> <!-- ca 15 Min bevor der Cache expired -->
+      	<memory><binary size="10000000" eviction="MEMORY"></binary></memory> <!-- 10 MB Cache -->
+      </replicated-cache-configuration>
+  
+      <!-- These are concrete caches which use replicated mode as clustering strategy -->
+      <replicated-cache name="nx3Cache" configuration="replicated-binary-cache-template" mode="ASYNC"/>
+      <replicated-cache name="userdetails" configuration="replicated-binary-cache-template" mode="ASYNC"/>
+      <replicated-cache name="beanModels" configuration="replicated-object-cache-template" mode="ASYNC"/>
+     
+   </cache-container>
+</infinispan>

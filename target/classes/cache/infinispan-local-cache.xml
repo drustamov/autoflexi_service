@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan xmlns="urn:infinispan:config:9.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:infinispan:config:9.1 http://infinispan.org/schemas/infinispan-config-9.1.xsd">
+   <cache-container default-cache="nx3Cache">
+      
+      <!-- This is a template for concrete object caches -->
+      <local-cache-configuration name="local-object-cache-template">
+      	<expiration lifespan="1000000"/> <!-- ca 15 Min bevor der Cache expired -->
+      	<memory><object size="100"></object></memory> <!-- 10 MB Cache -->
+      </local-cache-configuration>
+      
+      <!-- This is a template for concrete binary caches -->
+      <local-cache-configuration name="local-binary-cache-template">
+      	<expiration lifespan="1000000" /> <!-- ca 15 Min bevor der Cache expired -->
+      	<memory><binary size="10000000" eviction="MEMORY"></binary></memory> <!-- 10 MB Cache -->
+      </local-cache-configuration>
+     
+      <!-- These are concrete caches which use local mode so no clustering strategy -->
+      <local-cache name="nx3Cache" simple-cache="true" configuration="local-binary-cache-template"/>
+      <local-cache name="userdetails" simple-cache="true" configuration="local-binary-cache-template"/>
+      <local-cache name="beanModels" simple-cache="true" configuration="local-object-cache-template"/>
+   </cache-container>
+</infinispan>

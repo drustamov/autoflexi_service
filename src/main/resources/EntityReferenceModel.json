@@ -1,0 +1,15 @@
+[
+	{
+		"clazz":"de.seriea.nx3.core.model.businesspartner.Employee",
+		"cardinality":{"min":1},
+		"references":[
+			{"clazz": "de.seriea.nx3.core.model.businesspartner.Operator", "referenceProperty":"roles"}
+		]
+	},
+	{
+		"clazz":"de.seriea.nx3.core.model.shared.UserDetails",
+		"references":[
+			{"clazz": "de.seriea.nx3.core.model.businesspartner.Employee"}
+		]
+	}
+]

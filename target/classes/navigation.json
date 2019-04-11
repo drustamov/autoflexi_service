@@ -1,0 +1,452 @@
+[
+	{
+		"menu": "ROOT",
+		"labelKey": "root_businesspartners",
+		"order": 1,
+		"groups": [
+			"*"
+		],
+		"icon": "far fa-handshake",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 0,
+				"target": "resourceDescriptions_carrier"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_target"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 2,
+				"target": "resourceDescriptions_vehicle"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 3,
+				"target": "resourceDescriptions_department"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 4,
+				"target": "resourceDescriptions_qualification"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 5,
+				"target": "resourceDescriptions_turnover"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 6,
+				"target": "resourceDescriptions_contact"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 7,
+				"target": "resourceDescriptions_nx3document"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 8,
+				"target": "resourceDescriptions_supplier"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 9,
+				"target": "resourceDescriptions_customer"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 10,
+				"target": "resourceDescriptions_location"
+			}
+		]
+	},
+	{
+		"menu": "ROOT",
+		"labelKey": "root_operator",
+		"order": 2,
+		"groups": ["*"],
+		"icon": "fab fa-codepen",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_load"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 2,
+				"target": "resourceDescriptions_transport"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 3,
+				"target": "resourceDescriptions_tender"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 4,
+				"target": "resourceDescriptions_freight"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 5,
+				"target": "resourceDescriptions_linehaulimport"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 6,
+				"target": "resourceDescriptions_freightimport"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 7,
+				"target": "resourceDescriptions_linehaul"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 8,
+				"target": "resourceDescriptions_linehaulcapacity"
+			},
+			{
+				"labelKey": "nx3_label_planview",
+				"type": "STATE",
+				"icon": "fa fa-calendar",
+				"target": "app.linehaulPlanview",
+				"order": 9
+			},
+			{
+				"labelKey": "nx3_label_planview_schedule",
+				"type": "STATE",
+				"icon": "fa fa-calendar-check",
+				"target": "app.linehaulPlanviewSchedule",
+				"order": 10
+			},
+			{
+				"labelKey": "nx3_label_vehicle_calendar",
+				"type": "STATE",
+				"icon": "fa fa-car",
+				"target": "app.vehiclecalendar",
+				"order": 11
+			}
+		]
+	},
+	{
+		"menu": "ROOT",
+		"labelKey": "insights",
+		"order": 3,
+		"groups": [
+			"*"
+		],
+		"icon": "far fa-chart-bar",
+		"entries": [
+			{
+				"labelKey": "nx3_label_bpm",
+				"type": "STATE",
+				"icon": "fa fa-gears",
+				"target": "app.bpm",
+				"order": 0
+			}
+		]
+	},
+	{
+		"menu": "ROOT",
+		"labelKey": "root_orders",
+		"order": 4,
+		"groups": [
+			"*"
+		],
+		"icon": "fa fa-clipboard",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_order"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 2,
+				"target": "resourceDescriptions_orderitem"
+			}
+		]
+	},
+	{
+		"menu": "SETTINGS",
+		"labelKey": "main_settings",
+		"order": 1,
+		"groups": ["ADMIN_GROUP"],
+		"icon": "fa fa-home",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 0,
+				"target": "resourceDescriptions_operator"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_qualificationdefinition"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 2,
+				"target": "resourceDescriptions_configuration"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 3,
+				"target": "resourceDescriptions_translation"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 4,
+				"target": "resourceDescriptions_nx3sequence"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 5,
+				"target": "resourceDescriptions_statemachinedefinition"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 6,
+				"target": "resourceDescriptions_nx3usertaskprioritydefinition"
+			},
+			{
+				"labelKey": "nx3_label_bpm",
+				"type": "STATE",
+				"icon": "fa fa-gears",
+				"target": "app.bpm",
+				"order": 7
+			},
+			{
+				"labelKey": "nx3_label_batch",
+				"type": "STATE",
+				"icon": "fa fa-list-ol",
+				"target": "app.batch",
+				"order": 8
+			},
+			{
+				"labelKey": "nx3_label_emailsettings",
+				"type": "STATE",
+				"icon": "fa fa-envelope",
+				"target": "app.emailsettings({server:'resourceServer'})",
+				"order": 9
+			},
+			{
+				"labelKey": "nx3_label_import_json",
+				"type": "STATE",
+				"icon": "fa fa-code",
+				"target": "app.jsonimport({server:'resourceServer'})",
+				"order": 10
+			},
+			{
+				"labelKey": "nx3_label_manage_translations",
+				"type": "STATE",
+				"icon": "fa fa-language",
+				"target": "app.translationimport({server:'resourceServer'})",
+				"order": 11
+			},
+			{
+				"labelKey": "nx3_label_entityreferencemodel",
+				"type": "STATE",
+				"icon": "fa fa-sitemap",
+				"target": "app.entityreferencemodel({server:'resourceServer'})",
+				"order": 12
+			},
+			{
+				"labelKey": "nx3_label_filesystem",
+				"type": "STATE",
+				"icon": "fas fa-file",
+				"target": "app.filesystem({server:'resourceServer'})",
+				"order": 13
+			}
+		]
+	},
+	{
+		"menu": "SETTINGS",
+		"labelKey": "valuation",
+		"order": 2,
+		"groups": [
+			"*"
+		],
+		"icon": "far fa-thumbs-up",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 0,
+				"target": "resourceDescriptions_questionnaire"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_valuation"
+			}
+		]
+	},
+	{
+		"menu": "SETTINGS",
+		"labelKey": "settings_reports",
+		"order": 3,
+		"groups": [
+			"*"
+		],
+		"icon": "far fa-newspaper",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 0,
+				"target": "resourceDescriptions_nx3listquery"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_nx3report"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 2,
+				"target": "resourceDescriptions_documenttemplate"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 3,
+				"target": "resourceDescriptions_nx3dataquery"
+			}
+		]
+	},
+	{
+		"menu": "SETTINGS",
+		"labelKey": "root_cms",
+		"order": 4,
+		"groups": [
+			"*"
+		],
+		"icon": "far fa-edit",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 0,
+				"target": "resourceDescriptions_site"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_article"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 2,
+				"target": "resourceDescriptions_category"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 3,
+				"target": "resourceDescriptions_menu"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 4,
+				"target": "resourceDescriptions_staticlink"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 5,
+				"target": "resourceDescriptions_nx3mediafile"
+			}
+		]
+	},
+	{
+		"menu": "SETTINGS",
+		"labelKey": "settings_navigation",
+		"order": 5,
+		"groups": [
+			"*"
+		],
+		"icon": "fas fa-road",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 0,
+				"target": "resourceDescriptions_navigationgroup"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "resourceDescriptions_navigationentry"
+			}
+		]
+	},
+	{
+		"menu": "SETTINGS",
+		"labelKey": "usermanagement",
+		"order": 6,
+		"groups": [
+			"*"
+		],
+		"icon": "far fa-edit",
+		"entries": [
+			{
+				"type": "RESOURCE",
+				"order": 0,
+				"target": "authResourceDescriptions_authority"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 1,
+				"target": "authResourceDescriptions_identity"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 2,
+				"target": "authResourceDescriptions_securitygroup"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 3,
+				"target": "resourceDescriptions_userdetails"
+			},
+			{
+				"type": "RESOURCE",
+				"order": 4,
+				"target": "resourceDescriptions_employee"
+			},
+			{
+				"labelKey": "nx3_label_import_json",
+				"type": "STATE",
+				"icon": "fa fa-code",
+				"target": "app.jsonimport({server:'oauthServer'})",
+				"order": 5
+			}
+		]
+	},
+	{
+		"menu": "SETTINGS",
+		"labelKey": "information",
+		"order": 6,
+		"groups": [
+			"*"
+		],
+		"icon": "far fa-info-square",
+		"entries": [
+			{
+				"labelKey": "nx3_label_used_plugins",
+				"type": "STATE",
+				"icon": "fa fa-plug",
+				"target": "app.pluginlist",
+				"order": 1
+			},
+			{
+				"labelKey": "nx3_label_data_security_management",
+				"type": "STATE",
+				"icon": "fa fa-user-secret",
+				"target": "app.personalData",
+				"order": 2
+			}
+		]
+	}
+]

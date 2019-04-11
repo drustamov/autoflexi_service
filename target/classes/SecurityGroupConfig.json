@@ -1,0 +1,7 @@
+[{
+	"securityGroup":"ADMIN_GROUP",
+	"securityRoles":[{
+		"entityClass":"de.seriea.nx3.core.model.businesspartner.Operator",
+		"securityGroups":["ADMIN_GROUP"]
+	}]
+}]
